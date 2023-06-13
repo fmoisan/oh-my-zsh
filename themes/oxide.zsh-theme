@@ -48,14 +48,14 @@ FMT_STAGED="%{$oxide_reset_color%} %{$oxide_limegreen%}✚"
 FMT_ACTION="(%{$oxide_limegreen%}%a%{$oxide_reset_color%})"
 FMT_VCS_STATUS="on %{$oxide_turquoise%} %b%u%c%{$oxide_reset_color%}"
 
-zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr    "${FMT_UNSTAGED}"
 zstyle ':vcs_info:*' stagedstr      "${FMT_STAGED}"
 zstyle ':vcs_info:*' actionformats  "${FMT_VCS_STATUS} ${FMT_ACTION}"
 zstyle ':vcs_info:*' formats        "${FMT_VCS_STATUS}"
 zstyle ':vcs_info:*' nvcsformats    ""
-zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+# zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 
 # Check for untracked files.
 +vi-git-untracked() {
